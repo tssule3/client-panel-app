@@ -5,13 +5,13 @@ import { Settings } from '../models/Settings';
 @Injectable()
 export class SettingsService {
   settings: Settings = {
-    allowRegistration: true,
+    allowRegistration: false,
     disableBalanceOnAdd: true,
     disableBalanceOnEdit: true
   }
 
-  constructor() { 
-    if(localStorage.getItem('settings') != null) {
+  constructor() {
+    if (localStorage.getItem('settings') != null) {
       this.settings = JSON.parse(localStorage.getItem('settings'));
     }
   }

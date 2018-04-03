@@ -24,13 +24,13 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.authService.register(this.email, this.password)
       .then(res => {
-        this.flashMessage.show('You are now registered and logged in', {
+        this.flashMessage.show('You Are Now Registered And Logged In', {
           cssClass: 'alert-success', timeout: 4000
         });
         this.router.navigate(['/']);
       })
       .catch(err => {
-        this.flashMessage.show(err.message, {
+        this.flashMessage.show('Enter Valid Email', {
           cssClass: 'alert-danger', timeout: 4000
         });
       });

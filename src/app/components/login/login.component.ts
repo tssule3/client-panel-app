@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       })
       .catch(err => {
-        this.flashMessage.show(err.message, {
+        this.flashMessage.show('Enter Registered Email Or Contact Admin', {
           cssClass: 'alert-danger', timeout: 4000
         });
       });

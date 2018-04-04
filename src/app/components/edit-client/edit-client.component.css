@@ -1,0 +1,8 @@
+.one{
+  transition: 2s ease;
+
+}
+.one:hover{
+  font-size: 25px;
+  transition: 4s ease;
+}

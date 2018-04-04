@@ -8,10 +8,11 @@
   </div>
 </div>
 <table *ngIf="clients?.length > 0;else noClients" class="table table-striped">
-  <thead class="thead-inverse">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Email</th>
+      <th>Phone</th>
       <th>Balance</th>
       <th></th>
     </tr>
@@ -20,8 +21,9 @@
     <tr *ngFor="let client of clients">
       <td>{{ client.firstName }} {{ client.lastName }}</td>
       <td>{{ client.email }}</td>
+      <td>{{client.phone}}</td>
       <td>{{ client.balance | currency:"INR":"symbol" }}</td>
-      <td><a routerLink="client/{{ client.id }}" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
+      <td><a routerLink="client/{{ client.id }}" class="btn btn-outline-secondary btn-sm one"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
     </tr>
   </tbody>
 </table>

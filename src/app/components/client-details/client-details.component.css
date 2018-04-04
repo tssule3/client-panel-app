@@ -1,0 +1,28 @@
+.customCard{
+  background-color: #a8a2a2;
+}
+.customLi{
+  background-color: #a1a5ea;
+}
+.customBal{
+  font-size: 20px;
+  transition: 2s ease;
+}
+.customBal:hover{
+  font-size: 50px;
+  transition: 4s ease;
+}
+ .one{
+  transition: 2s ease;
+ }
+.one:hover{
+  font-size: 25px;
+  transition: 4s ease;
+}
+.two{
+  transition: 2s ease;
+}
+.two:hover{
+  font-size: 25px;
+  transition: 4s ease;
+}

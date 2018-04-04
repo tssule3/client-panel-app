@@ -17,7 +17,7 @@
 </div>
 <hr>
 <div *ngIf="client" class="card ">
-  <h3 class="card-header">{{ client.firstName }} {{ client.lastName }}</h3>
+  <h3 class="card-header customLi">{{ client.firstName }} {{ client.lastName }}</h3>
   <div class="card-body customCard">
     <div class="row">
       <div class="cold-md-8 col-sm-6">
@@ -33,7 +33,8 @@
             {{ client.balance | currency:"INR":"symbol" }}
           </span>
           <small>
-            <a (click)="showBalanceUpdateInput = !showBalanceUpdateInput">
+            <a (click)="showBalanceUpdateInput = !showBalanceUpdateInput"
+            >
               <i class="fa fa-pencil"></i>
             </a>
           </small>

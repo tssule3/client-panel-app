@@ -1,8 +1,10 @@
 .customCard{
   background-color: #a08b4b;
+  color: white;
 }
 .customLi{
-  background-color: #ffc765;
+  background-color: #316b67;
+  color: white;
 }
 .customBal{
   font-size: 30px;
@@ -25,4 +27,72 @@
 .two:hover{
   font-size: 25px;
   transition: 4s ease;
+}
+.customCard:hover{
+  color: #ffffff;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 10s;
+}
+@-webkit-keyframes example {
+  0%   {background-color: #6a096b;}
+  10%   {background-color: #656b57;}
+  20%   {background-color: #6b612e;}
+  30%   {background-color: #6b3d3f;}
+  40%   {background-color: #593e6b;}
+  50%   {background-color: #353b6b;}
+  60%   {background-color: #24606b;}
+  70%    {background-color: #1f6b5a;}
+  80%    {background-color: #246b33;}
+  90%    {background-color: #536b21;}
+  100%  {background-color: #6b431e;}
+}
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color: #6a096b;}
+  10%   {background-color: #656b57;}
+  20%   {background-color: #6b612e;}
+  30%   {background-color: #6b3d3f;}
+  40%   {background-color: #593e6b;}
+  50%   {background-color: #353b6b;}
+  60%   {background-color: #24606b;}
+  70%    {background-color: #1f6b5a;}
+  80%    {background-color: #246b33;}
+  90%    {background-color: #536b21;}
+  100%  {background-color: #6b431e;}
+}
+.customLi:hover{
+  color: #ffffff;
+  -webkit-animation-name: example1; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+  animation-name: example1;
+  animation-duration: 10s;
+}
+@-webkit-keyframes example1 {
+  0%   {background-color: #316b67;}
+  10%   {background-color: #04516b;}
+  20%   {background-color: #6b3459;}
+  30%   {background-color: #096b06;}
+  40%   {background-color: #536b21;}
+  50%   {background-color: #ff5766;}
+  60%   {background-color: #069bc7;}
+  70%    {background-color: #ff0026;}
+  80%    {background-color: #6a096b;}
+  90%    {background-color: #6b3d3f;}
+  100%  {background-color: #6b431e;}
+}
+/* Standard syntax */
+@keyframes example1 {
+  0%   {background-color: #316b67;}
+  10%   {background-color: #04516b;}
+  20%   {background-color: #6b3459;}
+  30%   {background-color: #096b06;}
+  40%   {background-color: #536b21;}
+  50%   {background-color: #ff5766;}
+  60%   {background-color: #069bc7;}
+  70%    {background-color: #ff0026;}
+  80%    {background-color: #6a096b;}
+  90%    {background-color: #6b3d3f;}
+  100%  {background-color: #6b431e;}
 }

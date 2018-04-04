@@ -8,7 +8,8 @@
   </div>
 </div>
 <div class="table-responsive">
-  <table *ngIf="clients?.length > 0;else noClients" class="table table-striped">
+  <table *ngIf="clients?.length > 0;else noClients"
+         class="table table-striped customTable">
     <thead class="thead-dark">
     <tr>
       <th>Name</th>
@@ -24,7 +25,8 @@
       <td>{{ client.email }}</td>
       <td>{{client.phone}}</td>
       <td>{{ client.balance | currency:"INR":"symbol" }}</td>
-      <td><a routerLink="client/{{ client.id }}" class="btn btn-outline-secondary btn-sm one"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
+      <td><a routerLink="client/{{ client.id }}"
+             class="btn btn-outline-warning btn-sm one"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
     </tr>
     </tbody>
   </table>

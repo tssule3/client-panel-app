@@ -6,10 +6,10 @@
   </div>
   <div class="col-md-8">
     <div class="card">
-      <div class="card-header">
+      <div class="card-header customHeader">
         Add Client
       </div>
-      <div class="card-body">
+      <div class="card-body customBody mb-2">
         <form #clientForm="ngForm" (ngSubmit)="onSubmit(clientForm)">
           <div class="form-group">
             <label for="firstName">First Name</label>
@@ -115,7 +115,7 @@
             >
           </div>
 
-          <input type="submit" value="Submit" class="btn btn-outline-primary btn-block">
+          <input type="submit" value="Submit" class="btn btn-outline-warning btn-block">
         </form>
       </div>
     </div>

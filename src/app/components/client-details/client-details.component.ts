@@ -14,7 +14,7 @@ export class ClientDetailsComponent implements OnInit {
   client: Client;
   hasBalance: boolean = false;
   showBalanceUpdateInput: boolean = false;
-
+  proprty = false;
   constructor(
     private clientService: ClientService,
     private router: Router,
@@ -27,8 +27,8 @@ export class ClientDetailsComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
     // Get client
     this.clientService.getClient(this.id).subscribe(client => {
-      if(client != null) {
-        if(client.balance > 0) {
+      if (client != null) {
+        if (client.balance > 0) {
           this.hasBalance = true;
         }
       }
@@ -38,10 +38,18 @@ export class ClientDetailsComponent implements OnInit {
   }
 
   updateBalance() {
-    this.clientService.updateClient(this.client);
-    this.flashMessage.show('Balance updated', {
-      cssClass: 'alert-success', timeout: 4000
-    });
+    if (typeof(this.client.balance) !== 'number' || this.client.balance < 0 ) {
+      this.flashMessage.show('Enter Numeric Value Only Positive Amounts', {
+        cssClass: 'alert-danger', timeout: 4000
+      });
+      this.proprty = true;
+    } else {
+      this.clientService.updateClient(this.client);
+      this.flashMessage.show('Balance updated', {
+        cssClass: 'alert-success', timeout: 4000
+      });
+      this.proprty = false;
+    }
   }
 
   onDeleteClick() {

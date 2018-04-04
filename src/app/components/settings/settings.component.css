@@ -7,12 +7,12 @@
   transition: 4s ease;
   background-color: #ff5f25;
   color: black;
-  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example11; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
+  animation-name: example11;
   animation-duration: 10s;
 }
-@-webkit-keyframes example {
+@-webkit-keyframes example11 {
   0%   {background-color: red;}
   10%   {background-color: yellow;}
   20%   {background-color: green;}
@@ -26,7 +26,7 @@
   100% {background-color: mediumorchid;}
 }
 /* Standard syntax */
-@keyframes example {
+@keyframes example11 {
   0%   {background-color: red;}
   10%   {background-color: yellow;}
   20%   {background-color: green;}
@@ -47,12 +47,12 @@
 .customCard:hover{
   background-color: #ff5f25;
   color: #ffffff;
-  -webkit-animation-name: example1; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example12; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
-  animation-name: example1;
+  animation-name: example12;
   animation-duration: 10s;
 }
-@-webkit-keyframes example1 {
+@-webkit-keyframes example12 {
   0%   {background-color: #6a096b;}
   10%   {background-color: #656b57;}
   20%   {background-color: #6b612e;}
@@ -66,7 +66,7 @@
   100%  {background-color: #6b431e;}
 }
 /* Standard syntax */
-@keyframes example1 {
+@keyframes example12 {
   0%   {background-color: #6a096b;}
   10%   {background-color: #656b57;}
   20%   {background-color: #6b612e;}

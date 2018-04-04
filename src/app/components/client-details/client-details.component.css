@@ -30,12 +30,12 @@
 }
 .customCard:hover{
   color: #ffffff;
-  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example3; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
+  animation-name: example3;
   animation-duration: 10s;
 }
-@-webkit-keyframes example {
+@-webkit-keyframes example3 {
   0%   {background-color: #6a096b;}
   10%   {background-color: #656b57;}
   20%   {background-color: #6b612e;}
@@ -49,7 +49,7 @@
   100%  {background-color: #6b431e;}
 }
 /* Standard syntax */
-@keyframes example {
+@keyframes example3 {
   0%   {background-color: #6a096b;}
   10%   {background-color: #656b57;}
   20%   {background-color: #6b612e;}
@@ -64,12 +64,12 @@
 }
 .customLi:hover{
   color: #ffffff;
-  -webkit-animation-name: example1; /* Safari 4.0 - 8.0 */
+  -webkit-animation-name: example4; /* Safari 4.0 - 8.0 */
   -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
-  animation-name: example1;
+  animation-name: example4;
   animation-duration: 10s;
 }
-@-webkit-keyframes example1 {
+@-webkit-keyframes example4 {
   0%   {background-color: #316b67;}
   10%   {background-color: #04516b;}
   20%   {background-color: #6b3459;}
@@ -83,7 +83,7 @@
   100%  {background-color: #6b431e;}
 }
 /* Standard syntax */
-@keyframes example1 {
+@keyframes example4 {
   0%   {background-color: #316b67;}
   10%   {background-color: #04516b;}
   20%   {background-color: #6b3459;}

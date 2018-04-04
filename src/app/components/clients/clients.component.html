@@ -7,8 +7,9 @@
       Total Owed: {{ totalOwed | currency:"INR":"symbol" }}</h5>
   </div>
 </div>
-<table *ngIf="clients?.length > 0;else noClients" class="table table-striped">
-  <thead class="thead-dark">
+<div class="table-responsive">
+  <table *ngIf="clients?.length > 0;else noClients" class="table table-striped">
+    <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Email</th>
@@ -16,8 +17,8 @@
       <th>Balance</th>
       <th></th>
     </tr>
-  </thead>
-  <tbody>
+    </thead>
+    <tbody>
     <tr *ngFor="let client of clients">
       <td>{{ client.firstName }} {{ client.lastName }}</td>
       <td>{{ client.email }}</td>
@@ -25,9 +26,10 @@
       <td>{{ client.balance | currency:"INR":"symbol" }}</td>
       <td><a routerLink="client/{{ client.id }}" class="btn btn-outline-secondary btn-sm one"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
     </tr>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
+</div>
 <ng-template #noClients>
   <hr>
   <h5>There are no clients in the system</h5>

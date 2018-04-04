@@ -20,7 +20,7 @@ export class EditClientComponent implements OnInit {
     balance: 0
   }
   disableBalanceOnEdit: boolean;
-
+  proprty = false;
   constructor(
     private clientService: ClientService,
     private router: Router,
@@ -31,7 +31,7 @@ export class EditClientComponent implements OnInit {
 
   ngOnInit() {
     this.disableBalanceOnEdit = this.settingsService.getSettings().disableBalanceOnEdit;
-    
+
     // Get id from url
     this.id = this.route.snapshot.params['id'];
     // Get client
@@ -39,19 +39,29 @@ export class EditClientComponent implements OnInit {
   }
 
   onSubmit({value, valid}: {value: Client, valid: boolean}) {
-    if(!valid) {
-      this.flashMessage.show('Please fill out the form correctly', {
+    if (this.client.balance < 0) {
+      this.flashMessage.show('Please Enter Positive Amount', {
         cssClass: 'alert-danger', timeout: 4000
       });
+      this.proprty = true;
     } else {
-      // Add id to client
-      value.id = this.id;
-      // Update client
-      this.clientService.updateClient(value);
-      this.flashMessage.show('Client updated', {
-        cssClass: 'alert-success', timeout: 4000
-      });
-      this.router.navigate(['/client/'+this.id]);
+      if (!valid) {
+        this.flashMessage.show('Please fill out the form correctly', {
+          cssClass: 'alert-danger', timeout: 4000
+        });
+        this.proprty = true;
+      } else {
+        // Add id to client
+        value.id = this.id;
+        // Update client
+        this.clientService.updateClient(value);
+        this.flashMessage.show('Client updated', {
+          cssClass: 'alert-success', timeout: 4000
+        });
+        this.router.navigate(['/client/' + this.id]);
+        this.proprty = false;
+      }
     }
+
   }
 }

@@ -19,7 +19,7 @@ export class AddClientComponent implements OnInit {
     phone: '',
     balance: 0
   }
-
+  proprty = false;
   disableBalanceOnAdd: boolean;
 
   @ViewChild('clientForm') form: any;
@@ -36,25 +36,34 @@ export class AddClientComponent implements OnInit {
   }
 
   onSubmit({value, valid}: {value: Client, valid: boolean}) {
-    if(this.disableBalanceOnAdd) {
+    if (this.disableBalanceOnAdd) {
       value.balance = 0;
     }
-
-    if(!valid) {
-      // Show error
-      this.flashMessage.show('Please fill out the form correctly', {
+    if (this.client.balance < 0) {
+      this.flashMessage.show('Please Enter positive amount', {
         cssClass: 'alert-danger', timeout: 4000
       });
+      this.proprty = true;
     } else {
-      // Add new client
-      this.clientService.newClient(value);
-      // Show message
-      this.flashMessage.show('New client added', {
-        cssClass: 'alert-success', timeout: 4000
-      });
-      // Redirect to dash
-      this.router.navigate(['/']);
+      if (!valid) {
+        // Show error
+        this.flashMessage.show('Please fill out the form correctly', {
+          cssClass: 'alert-danger', timeout: 4000
+        });
+        this.proprty = true;
+      } else {
+        // Add new client
+        this.clientService.newClient(value);
+        // Show message
+        this.flashMessage.show('New client added', {
+          cssClass: 'alert-success', timeout: 4000
+        });
+        // Redirect to dash
+        this.router.navigate(['/']);
+        this.proprty = false;
+      }
     }
+
   }
 
 }

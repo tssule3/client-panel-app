@@ -5,4 +5,41 @@
 .one:hover{
   font-size: 25px;
   transition: 4s ease;
+  background-color: #ff5f25;
+  color: black;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 10s;
+}
+@-webkit-keyframes example {
+  0%   {background-color: red;}
+  10%   {background-color: yellow;}
+  20%   {background-color: green;}
+  30%   {background-color: blue;}
+  40%   {background-color: blueviolet;}
+  50%   {background-color: grey;}
+  60%   {background-color: deeppink;}
+  70%  {background-color: white;}
+  80%  {background-color: lightseagreen;}
+  90% {background-color: indianred;}
+  100% {background-color: mediumorchid;}
+}
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color: red;}
+  10%   {background-color: yellow;}
+  20%   {background-color: green;}
+  30%   {background-color: blue;}
+  40%   {background-color: blueviolet;}
+  50%   {background-color: grey;}
+  60%   {background-color: deeppink;}
+  70%  {background-color: white;}
+  80%  {background-color: lightseagreen;}
+  90% {background-color: indianred;}
+  100% {background-color: mediumorchid;}
+}
+
+.customCard{
+  background-color: #d6d0d0;
 }

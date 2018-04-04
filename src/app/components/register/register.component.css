@@ -1,3 +1,42 @@
 .customCard{
   background-color: #5c88ff;
 }
+.customLogin{
+
+  transition: 20s ease;
+}
+.customLogin:hover{
+  background-color: #ff5f25;
+  color: black;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 10s;
+}
+@-webkit-keyframes example {
+  0%   {background-color: #6b431e;}
+  10%   {background-color: #536b21;}
+  20%   {background-color: #246b33;}
+  30%   {background-color: #1f6b5a;}
+  40%   {background-color: #24606b;}
+  50%   {background-color: #353b6b;}
+  60%   {background-color: #593e6b;}
+  70%  {background-color: #6b3d3f;}
+  80%  {background-color: #6b612e;}
+  90% {background-color: #656b57;}
+  100% {background-color: #6a096b;}
+}
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color: #6b431e;}
+  10%   {background-color: #536b21;}
+  20%   {background-color: #246b33;}
+  30%   {background-color: #1f6b5a;}
+  40%   {background-color: #24606b;}
+  50%   {background-color: #353b6b;}
+  60%   {background-color: #593e6b;}
+  70%  {background-color: #6b3d3f;}
+  80%  {background-color: #6b612e;}
+  90% {background-color: #656b57;}
+  100% {background-color: #6a096b;}
+}

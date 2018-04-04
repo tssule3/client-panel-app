@@ -1,11 +1,11 @@
 .customCard{
-  background-color: #a8a2a2;
+  background-color: #a08b4b;
 }
 .customLi{
-  background-color: #a1a5ea;
+  background-color: #ffc765;
 }
 .customBal{
-  font-size: 20px;
+  font-size: 30px;
   transition: 2s ease;
 }
 .customBal:hover{

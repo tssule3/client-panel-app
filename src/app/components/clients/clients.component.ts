@@ -19,7 +19,11 @@ export class ClientsComponent implements OnInit {
       this.clients = clients;
       this.getTotalOwed();
     });
-  }
+    for ( let start = 1; start < 10; start++)  {
+      setTimeout(function () { console.log(start);  }, 1000 * start);
+
+    }
+      }
 
   getTotalOwed() {
     this.totalOwed = this.clients.reduce((total, client) => {

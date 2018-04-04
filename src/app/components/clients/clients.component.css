@@ -2,6 +2,14 @@
   transition: 2s ease;
 }
 .one:hover{
-  font-size: 25px;
+  font-size: 35px;
   transition: 4s ease;
+}
+.oneSpecial{
+  transition: 2s ease;
+}
+.oneSpecial:hover{
+  font-size: 35px;
+  transition: 4s ease;
+  color: #ff5f25;
 }

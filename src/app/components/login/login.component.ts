@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   email: string;
   password: string;
+  errBlock = 0;
+  checkErrBlock = false;
 
   constructor(
     private authService: AuthService,
@@ -20,10 +22,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.authService.getAuth().subscribe(auth => {
-      if(auth) {
+      if (auth) {
         this.router.navigate(['/']);
       }
     });
+    console.log('localStorage ' + localStorage.getItem('count'));
   }
 
   onSubmit() {
@@ -35,9 +38,22 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       })
       .catch(err => {
-        this.flashMessage.show('Enter Registered Email Or Contact Admin', {
-          cssClass: 'alert-danger', timeout: 4000
-        });
+        if ( Number(localStorage.getItem('count')) > 3 ) {
+          this.flashMessage.show('Please Wait 10 seconds Before Logging In Again', {cssClass: 'alert-danger', timeout: 10000} );
+          this.checkErrBlock = true;
+          setTimeout(() => {
+            this.checkErrBlock = false;
+          }, 10000);
+        } else {
+          let userCount = 4 - this.errBlock;
+          this.flashMessage.show('Enter Registered Email & PassWord ' + userCount + ' chances left', {
+            cssClass: 'alert-danger', timeout: 4000
+          });
+          // console.log(4 - this.errBlock + ' chances  left');
+        }
+        this.errBlock += 1;
+        localStorage.setItem('count', this.errBlock.toString());
+
       });
   }
 

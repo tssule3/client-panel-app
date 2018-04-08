@@ -16,6 +16,7 @@
 .customTable{
   background-color: #a8a2a2;
   color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .customTable:hover{
   color: white;

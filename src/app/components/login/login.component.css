@@ -1,10 +1,10 @@
 .customCard{
-  background-color: rgba(0, 52, 255, 0.32);
-
+  background-color: rgba(107, 100, 59, 0.32);
   color: #6a096b;
   font-size: 25px;
   font-style: italic;
   font-family: "Comic Sans MS";
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 /*.customLogin{*/
   /*background-color: #596b63;*/
@@ -46,9 +46,17 @@
   /*100%  {background-color: #6b431e;}*/
 /*}*/
 .customBtn{
+  background-color: rgba(107, 100, 59, 0);
   color: #6a096b;
   font-size: 25px;
   font-style: italic;
   font-family: "Comic Sans MS";
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.customBtn:hover{
+  background-color: rgba(0, 0, 0, 0.19);
+}
+.box{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }

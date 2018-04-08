@@ -1,50 +1,50 @@
 .customNav{
-  background-color: #069bc7;
-  color: black;
+  background-color: #000000;
+
   font-family: "Comic Sans MS";
 }
-.customNav:hover{
-  background-color: #ff5f25;
+/*.customNav:hover{*/
+  /*background-color: #ff5f25;*/
 
-  -webkit-animation-name: example9; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
-  animation-name: example9;
-  animation-duration: 20s;
-}
-@-webkit-keyframes example9 {
-  0%   {background-color: #6a096b;}
-  10%   {background-color: #656b57;}
-  20%   {background-color: #6b612e;}
-  30%   {background-color: #6b3d3f;}
-  40%   {background-color: #593e6b;}
-  50%   {background-color: #353b6b;}
-  60%   {background-color: #24606b;}
-  70%    {background-color: #1f6b5a;}
-  80%    {background-color: #246b33;}
-  90%    {background-color: #536b21;}
-  100%  {background-color: #6b431e;}
-}
+  /*-webkit-animation-name: example9; !* Safari 4.0 - 8.0 *!*/
+  /*-webkit-animation-duration: 20s; !* Safari 4.0 - 8.0 *!*/
+  /*animation-name: example9;*/
+  /*animation-duration: 20s;*/
+/*}*/
+/*@-webkit-keyframes example9 {*/
+  /*0%   {background-color: #6a096b;}*/
+  /*10%   {background-color: #656b57;}*/
+  /*20%   {background-color: #6b612e;}*/
+  /*30%   {background-color: #6b3d3f;}*/
+  /*40%   {background-color: #593e6b;}*/
+  /*50%   {background-color: #353b6b;}*/
+  /*60%   {background-color: #24606b;}*/
+  /*70%    {background-color: #1f6b5a;}*/
+  /*80%    {background-color: #246b33;}*/
+  /*90%    {background-color: #536b21;}*/
+  /*100%  {background-color: #6b431e;}*/
+/*}*/
 
-/* Standard syntax */
-@keyframes example9 {
-  0%   {background-color: #6a096b;}
-  10%   {background-color: #656b57;}
-  20%   {background-color: #6b612e;}
-  30%   {background-color: #6b3d3f;}
-  40%   {background-color: #593e6b;}
-  50%   {background-color: #353b6b;}
-  60%   {background-color: #24606b;}
-  70%    {background-color: #1f6b5a;}
-  80%    {background-color: #246b33;}
-  90%    {background-color: #536b21;}
-  100%  {background-color: #6b431e;}
-}
+/*!* Standard syntax *!*/
+/*@keyframes example9 {*/
+  /*0%   {background-color: #6a096b;}*/
+  /*10%   {background-color: #656b57;}*/
+  /*20%   {background-color: #6b612e;}*/
+  /*30%   {background-color: #6b3d3f;}*/
+  /*40%   {background-color: #593e6b;}*/
+  /*50%   {background-color: #353b6b;}*/
+  /*60%   {background-color: #24606b;}*/
+  /*70%    {background-color: #1f6b5a;}*/
+  /*80%    {background-color: #246b33;}*/
+  /*90%    {background-color: #536b21;}*/
+  /*100%  {background-color: #6b431e;}*/
+/*}*/
 .customCol{
-  color: #6b0005;
+  color: #ffed00;
   font-size: 30px;
   font-family: "Comic Sans MS";
 }
 .myClass a{
-  color: black;
+  color: #ffed00;
   font-size: larger;
 }

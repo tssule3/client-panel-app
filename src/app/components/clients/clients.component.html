@@ -1,38 +1,42 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2><i class="fa fa-users"></i> Clients</h2>
+<div class="container">
+  <br><br>
+  <div class="row">
+    <div class="col-md-6">
+      <h2><i class="fa fa-users"></i> Clients</h2>
+    </div>
+    <div class="col-md-6">
+      <h5 class="text-right oneSpecial">
+        Total Owed: {{ totalOwed | currency:"INR":"symbol" }}</h5>
+    </div>
   </div>
-  <div class="col-md-6">
-    <h5 class="text-right oneSpecial">
-      Total Owed: {{ totalOwed | currency:"INR":"symbol" }}</h5>
+  <div class="table-responsive">
+    <table *ngIf="clients?.length > 0;else noClients"
+           class="table table-striped customTable">
+      <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Balance</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let client of clients">
+        <td>{{ client.firstName }} {{ client.lastName }}</td>
+        <td>{{ client.email }}</td>
+        <td>{{client.phone}}</td>
+        <td>{{ client.balance | currency:"INR":"symbol" }}</td>
+        <td><a routerLink="client/{{ client.id }}"
+               class="btn btn-outline-warning btn-sm one"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
+      </tr>
+      </tbody>
+    </table>
+
   </div>
-</div>
-<div class="table-responsive">
-  <table *ngIf="clients?.length > 0;else noClients"
-         class="table table-striped customTable">
-    <thead class="thead-dark">
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Balance</th>
-      <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let client of clients">
-      <td>{{ client.firstName }} {{ client.lastName }}</td>
-      <td>{{ client.email }}</td>
-      <td>{{client.phone}}</td>
-      <td>{{ client.balance | currency:"INR":"symbol" }}</td>
-      <td><a routerLink="client/{{ client.id }}"
-             class="btn btn-outline-warning btn-sm one"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
-    </tr>
-    </tbody>
-  </table>
+  <ng-template #noClients>
+    <hr>
+    <h5>There are no clients in the system</h5>
+  </ng-template>
 
 </div>
-<ng-template #noClients>
-  <hr>
-  <h5>There are no clients in the system</h5>
-</ng-template>

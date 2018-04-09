@@ -1,85 +1,89 @@
-.one{
-  transition: 2s ease;
+/*.one{*/
+  /*transition: 2s ease;*/
 
-}
-.one:hover{
-  font-size: 25px;
-  transition: 4s ease;
-  background-color: #ff5f25;
-  color: black;
-  -webkit-animation-name: example11; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
-  animation-name: example11;
-  animation-duration: 10s;
-}
-@-webkit-keyframes example11 {
-  0%   {background-color: red;}
-  10%   {background-color: yellow;}
-  20%   {background-color: green;}
-  30%   {background-color: blue;}
-  40%   {background-color: blueviolet;}
-  50%   {background-color: grey;}
-  60%   {background-color: deeppink;}
-  70%  {background-color: white;}
-  80%  {background-color: lightseagreen;}
-  90% {background-color: indianred;}
-  100% {background-color: mediumorchid;}
-}
-/* Standard syntax */
-@keyframes example11 {
-  0%   {background-color: red;}
-  10%   {background-color: yellow;}
-  20%   {background-color: green;}
-  30%   {background-color: blue;}
-  40%   {background-color: blueviolet;}
-  50%   {background-color: grey;}
-  60%   {background-color: deeppink;}
-  70%  {background-color: white;}
-  80%  {background-color: lightseagreen;}
-  90% {background-color: indianred;}
-  100% {background-color: mediumorchid;}
-}
+/*}*/
+/*.one:hover{*/
+  /*font-size: 25px;*/
+  /*transition: 4s ease;*/
+  /*background-color: #ff5f25;*/
+  /*color: black;*/
+  /*-webkit-animation-name: example11; !* Safari 4.0 - 8.0 *!*/
+  /*-webkit-animation-duration: 10s; !* Safari 4.0 - 8.0 *!*/
+  /*animation-name: example11;*/
+  /*animation-duration: 10s;*/
+/*}*/
+/*@-webkit-keyframes example11 {*/
+  /*0%   {background-color: red;}*/
+  /*10%   {background-color: yellow;}*/
+  /*20%   {background-color: green;}*/
+  /*30%   {background-color: blue;}*/
+  /*40%   {background-color: blueviolet;}*/
+  /*50%   {background-color: grey;}*/
+  /*60%   {background-color: deeppink;}*/
+  /*70%  {background-color: white;}*/
+  /*80%  {background-color: lightseagreen;}*/
+  /*90% {background-color: indianred;}*/
+  /*100% {background-color: mediumorchid;}*/
+/*}*/
+/*!* Standard syntax *!*/
+/*@keyframes example11 {*/
+  /*0%   {background-color: red;}*/
+  /*10%   {background-color: yellow;}*/
+  /*20%   {background-color: green;}*/
+  /*30%   {background-color: blue;}*/
+  /*40%   {background-color: blueviolet;}*/
+  /*50%   {background-color: grey;}*/
+  /*60%   {background-color: deeppink;}*/
+  /*70%  {background-color: white;}*/
+  /*80%  {background-color: lightseagreen;}*/
+  /*90% {background-color: indianred;}*/
+  /*100% {background-color: mediumorchid;}*/
+/*}*/
 
 .customCard{
   background-color: #d6d0d0;
 }
 
-.customCard:hover{
-  background-color: #ff5f25;
-  color: #ffffff;
-  -webkit-animation-name: example12; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
-  animation-name: example12;
-  animation-duration: 10s;
-}
-@-webkit-keyframes example12 {
-  0%   {background-color: #6a096b;}
-  10%   {background-color: #656b57;}
-  20%   {background-color: #6b612e;}
-  30%   {background-color: #6b3d3f;}
-  40%   {background-color: #593e6b;}
-  50%   {background-color: #353b6b;}
-  60%   {background-color: #24606b;}
-  70%    {background-color: #1f6b5a;}
-  80%    {background-color: #246b33;}
-  90%    {background-color: #536b21;}
-  100%  {background-color: #6b431e;}
-}
-/* Standard syntax */
-@keyframes example12 {
-  0%   {background-color: #6a096b;}
-  10%   {background-color: #656b57;}
-  20%   {background-color: #6b612e;}
-  30%   {background-color: #6b3d3f;}
-  40%   {background-color: #593e6b;}
-  50%   {background-color: #353b6b;}
-  60%   {background-color: #24606b;}
-  70%    {background-color: #1f6b5a;}
-  80%    {background-color: #246b33;}
-  90%    {background-color: #536b21;}
-  100%  {background-color: #6b431e;}
-}
+/*.customCard:hover{*/
+   /*background-color: #ff5f25;*/
+   /*color: #ffffff;*/
+   /*-webkit-animation-name: example12; !* Safari 4.0 - 8.0 *!*/
+   /*-webkit-animation-duration: 10s; !* Safari 4.0 - 8.0 *!*/
+   /*animation-name: example12;*/
+   /*animation-duration: 10s;*/
+ /*}*/
+/*@-webkit-keyframes example12 {*/
+  /*0%   {background-color: #6a096b;}*/
+  /*10%   {background-color: #656b57;}*/
+  /*20%   {background-color: #6b612e;}*/
+  /*30%   {background-color: #6b3d3f;}*/
+  /*40%   {background-color: #593e6b;}*/
+  /*50%   {background-color: #353b6b;}*/
+  /*60%   {background-color: #24606b;}*/
+  /*70%    {background-color: #1f6b5a;}*/
+  /*80%    {background-color: #246b33;}*/
+  /*90%    {background-color: #536b21;}*/
+  /*100%  {background-color: #6b431e;}*/
+/*}*/
+/*!* Standard syntax *!*/
+/*@keyframes example12 {*/
+  /*0%   {background-color: #6a096b;}*/
+  /*10%   {background-color: #656b57;}*/
+  /*20%   {background-color: #6b612e;}*/
+  /*30%   {background-color: #6b3d3f;}*/
+  /*40%   {background-color: #593e6b;}*/
+  /*50%   {background-color: #353b6b;}*/
+  /*60%   {background-color: #24606b;}*/
+  /*70%    {background-color: #1f6b5a;}*/
+  /*80%    {background-color: #246b33;}*/
+  /*90%    {background-color: #536b21;}*/
+  /*100%  {background-color: #6b431e;}*/
+/*}*/
 .customHeader{
   background-color: #596b63;
   color: white;
+}
+.box{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
 }

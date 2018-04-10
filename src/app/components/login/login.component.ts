@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   password: string;
   errBlock = 0;
   checkErrBlock = false;
-
+  myClass;
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -43,8 +43,11 @@ export class LoginComponent implements OnInit {
           this.errBlock = 0;
           this.flashMessage.show('Please Wait 10 seconds Before Logging In Again', {cssClass: 'alert-danger', timeout: 10000} );
           this.checkErrBlock = true;
+          this.myClass = {'customBtns': this.checkErrBlock};
           setTimeout(() => {
             this.checkErrBlock = false;
+            this.myClass = {'customBtn': !this.checkErrBlock,
+              'btn': true, 'btn-block': true, 'btn-outline': true};
           }, 10000);
         } else {
           this.errBlock = Number(localStorage.getItem('count'));

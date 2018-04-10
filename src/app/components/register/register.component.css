@@ -60,3 +60,10 @@
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
 }
+.customBtns{
+  background-color: red;
+  text-decoration-line: line-through;
+}
+.customBtns:hover{
+  background-color: red;
+}

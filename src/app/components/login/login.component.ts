@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       }
     });
+    this.errBlock = localStorage.getItem('count');
     console.log('localStorage ' + localStorage.getItem('count'));
   }
 
@@ -39,21 +40,24 @@ export class LoginComponent implements OnInit {
       })
       .catch(err => {
         if ( Number(localStorage.getItem('count')) > 3 ) {
+          this.errBlock = 0;
           this.flashMessage.show('Please Wait 10 seconds Before Logging In Again', {cssClass: 'alert-danger', timeout: 10000} );
           this.checkErrBlock = true;
           setTimeout(() => {
             this.checkErrBlock = false;
           }, 10000);
         } else {
-          let userCount = 4 - this.errBlock;
+          this.errBlock = localStorage.getItem('count');
+          let userCount = 3 - this.errBlock;
           this.flashMessage.show('Enter Registered Email & PassWord ' + userCount + ' chances left', {
             cssClass: 'alert-danger', timeout: 4000
           });
           // console.log(4 - this.errBlock + ' chances  left');
         }
-        this.errBlock += 1;
+        this.errBlock++;
+        console.log('errBlock = ' + this.errBlock);
         localStorage.setItem('count', this.errBlock.toString());
-
+        console.log('localStorage after submit ' + localStorage.getItem('count'));
       });
   }
 

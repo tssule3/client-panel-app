@@ -20,7 +20,8 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log('localStorage ' + localStorage.getItem('count'));
+    this.errBlock = localStorage.getItem('regCount');
+    console.log('localStorage ' + localStorage.getItem('regCount'));
   }
 
   onSubmit() {
@@ -32,21 +33,24 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/']);
       })
       .catch(err => {
-        if ( Number(localStorage.getItem('count')) > 3 ) {
+        if ( Number(localStorage.getItem('regCount')) > 3 ) {
+          this.errBlock = 0;
           this.flashMessage.show('Please Wait 10 seconds Before Registering In Again', {cssClass: 'alert-danger', timeout: 10000} );
           this.checkErrBlock = true;
           setTimeout(() => {
             this.checkErrBlock = false;
           }, 10000);
         } else {
-          let userCount = 4 - this.errBlock;
+          let userCount = 3 - this.errBlock;
           this.flashMessage.show('Enter Valid Email ' + userCount + ' chances left', {
             cssClass: 'alert-danger', timeout: 4000
           });
           // console.log(4 - this.errBlock + ' chances  left');
         }
-        this.errBlock += 1;
-        localStorage.setItem('count', this.errBlock.toString());
+        this.errBlock++;
+        console.log('errBlock = ' + this.errBlock);
+        localStorage.setItem('regCount', this.errBlock.toString());
+        console.log('localStorage after submit ' + localStorage.getItem('regCount'));
       });
   }
 

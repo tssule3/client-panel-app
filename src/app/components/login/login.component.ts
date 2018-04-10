@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       }
     });
-    this.errBlock = localStorage.getItem('count');
+    this.errBlock = Number(localStorage.getItem('count'));
     console.log('localStorage ' + localStorage.getItem('count'));
   }
 
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
             this.checkErrBlock = false;
           }, 10000);
         } else {
-          this.errBlock = localStorage.getItem('count');
+          this.errBlock = Number(localStorage.getItem('count'));
           let userCount = 3 - this.errBlock;
           this.flashMessage.show('Enter Registered Email & PassWord ' + userCount + ' chances left', {
             cssClass: 'alert-danger', timeout: 4000

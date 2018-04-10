@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.errBlock = localStorage.getItem('regCount');
+    this.errBlock = Number(localStorage.getItem('regCount'));
     console.log('localStorage ' + localStorage.getItem('regCount'));
   }
 
@@ -41,6 +41,7 @@ export class RegisterComponent implements OnInit {
             this.checkErrBlock = false;
           }, 10000);
         } else {
+          this.errBlock = Number(localStorage.getItem('regCount'));
           let userCount = 3 - this.errBlock;
           this.flashMessage.show('Enter Valid Email ' + userCount + ' chances left', {
             cssClass: 'alert-danger', timeout: 4000

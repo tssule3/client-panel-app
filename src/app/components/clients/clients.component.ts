@@ -11,10 +11,13 @@ import { Client } from '../../models/Client';
 export class ClientsComponent implements OnInit {
   clients: Client[];
   totalOwed: number;
-
+  showSpinner = false;
   constructor(private clientService: ClientService) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.showSpinner = true;
+    }, 3000)
     this.clientService.getClients().subscribe(clients => {
       this.clients = clients;
       this.getTotalOwed();

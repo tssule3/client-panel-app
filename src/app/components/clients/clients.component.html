@@ -8,7 +8,7 @@
         Total Owed: {{ totalOwed | currency:"INR":"symbol" }}</h5>
     </div>
   </div>
-  <div class="table-responsive">
+  <div class="table-responsive" *ngIf="showSpinner; else spinner">
     <table *ngIf="clients?.length > 0;else noClients"
            class="table table-striped customTable">
       <thead class="thead-dark">
@@ -37,5 +37,7 @@
     <hr>
     <h5>There are no clients in the system</h5>
   </ng-template>
-
+  <ng-template #spinner>
+    <img src="../../../assets/spinner.gif" class="spinner">
+  </ng-template>
 </div>

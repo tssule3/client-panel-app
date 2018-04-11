@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
         } else {
           this.errBlock = Number(localStorage.getItem('regCount'));
           let userCount = 3 - this.errBlock;
-        this.flashMessage.show('Enter Valid Email ' + userCount + ' chances left', {
+        this.flashMessage.show('Enter Valid Email And Password' + userCount + ' chances left', {
 
           cssClass: 'alert-danger', timeout: 4000
 
